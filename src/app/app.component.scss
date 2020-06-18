@@ -1,0 +1,10 @@
+@import '../styles.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 75px;
+  color: $primary-color;
+  background-color: darken($secondary-color, 60%);
+}

@@ -1,0 +1,15 @@
+@import '../../../styles.scss';
+
+.grid-container {
+  border: 1px solid $accent-color;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-auto-rows: minmax(50vh, auto);
+  grid-gap: 20px;
+}
+
+.grid-item {
+  background: $secondary-color;
+  border: 1px solid darken($accent-color, 40%);
+}
+
