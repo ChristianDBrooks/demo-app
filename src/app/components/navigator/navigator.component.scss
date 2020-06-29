@@ -1,0 +1,29 @@
+@import '../../../styles.scss';
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 75px;
+  color: $primary-color;
+  background-color: darken($secondary-color, 60%);
+}
+
+nav {
+  // width: 200px;
+  // justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  
+  a {
+    padding: 0 10px;
+    color: darken($primary-color, 20%);
+    text-decoration: none;
+
+    &.active {
+      color: $primary-color;
+    }
+
+  }
+}
+
