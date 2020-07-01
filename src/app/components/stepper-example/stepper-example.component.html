@@ -1,0 +1,22 @@
+<mat-horizontal-stepper [linear]="true" #stepper>
+    <mat-step [completed]="faCompleted" label="Field Assessment">
+      Step One
+      <button (click)="faCompleted = true" matStepperNext>Completed</button>
+    </mat-step>
+    <mat-step [completed]="rowCompleted" label="Right of Way Research">
+      Step Two
+      <button (click)="rowCompleted = true" matStepperNext>Completed</button>
+    </mat-step>
+    <mat-step [completed]="eaCompleted" label="Easement Acquisition">
+      Step Three
+      <button (click)="eaCompleted = true" matStepperNext>Completed</button>
+    </mat-step>
+    <mat-step [completed]="stCompleted" label="Staging">
+      Step Four
+      <button (click)="stCompleted = true" matStepperNext>Completed</button>
+    </mat-step>
+    <mat-step [completed]="fdCompleted" label="Final Design">
+      Step Five
+      <button (click)="fdCompleted = true" matStepperNext>Completed</button>
+    </mat-step>
+  </mat-horizontal-stepper>

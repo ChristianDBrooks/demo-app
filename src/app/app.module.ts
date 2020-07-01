@@ -11,6 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigatorComponent } from './components/navigator/navigator.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { NavLinkDirective } from './directives/nav-link.directive';
+import { StepperExampleComponent } from './components/stepper-example/stepper-example.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { RememberVerseComponent } from './components/remember-verse/remember-verse.component';
+import { TimerPipe } from './pipes/timer.pipe'
 
 @NgModule({
   declarations: [
@@ -20,13 +24,17 @@ import { NavLinkDirective } from './directives/nav-link.directive';
     CssGridExampleComponent,
     NavigatorComponent,
     HomePageComponent,
-    NavLinkDirective
+    NavLinkDirective,
+    StepperExampleComponent,
+    RememberVerseComponent,
+    TimerPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatStepperModule
   ],
   providers: [],
   bootstrap: [AppComponent]

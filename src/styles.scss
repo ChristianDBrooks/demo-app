@@ -1,22 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 
 $dark-theme: false !default;
 
 $light-primary: #ffffff !default;
 $light-secondary: #eeeeee !default;
 $light-accent: #659EFF !default;
+$light-warn: #ff9165 !default;
 $light-text-primary: #111111 !default;
 $light-text-secondary:#808080 !default;
 
 $dark-primary: #000;
 $dark-secondary: #3F4045;
 $dark-accent: #659EFF;
+$dark-warn: #ff9165;
 $dark-text-primary: #FFFFFF;
 $dark-text-secondary:#DDDDDD;
 
 $primary-color: $light-primary;
 $secondary-color: $light-secondary;
 $accent-color: $light-accent;
+$warn-color: $light-warn;
 $text-primary-color: $light-text-primary;
 $text-secondary-color: $light-text-secondary;
 
@@ -24,6 +28,7 @@ $text-secondary-color: $light-text-secondary;
   $primary-color: $dark-primary;
   $secondary-color: $dark-secondary;
   $accent-color: $dark-accent;
+  $warn-color: $dark-warn;
   $text-primary-color: $dark-text-primary;
   $text-secondary-color: $dark-text-secondary;
 }

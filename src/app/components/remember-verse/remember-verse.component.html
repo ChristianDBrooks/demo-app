@@ -1,0 +1,19 @@
+<label for="">Type the memory verse you'd like to memorize.<br></label>
+<textarea #inputVerse value="" (keyup)="updateSaveVerse($event.target.value)" rows="12" cols="100"></textarea>
+
+<button (click)="saveVerse(inputVerse)" [disabled]="!saveEnabledFlag">Save Verse</button>
+<button (click)="resetVerse(verseAttempt)">Reset Verse</button>
+<button (click)="showHint()">Show Verse</button>
+
+<p *ngIf="showHintFlag">{{this.fullVerse}}</p>
+
+<p [style.color]="verseCompletedFlag ? 'green' : 'initial'">{{this.hiddenVerse}}</p>
+
+<label>Fill in the blanks.<br></label>
+<textarea #verseAttempt value="" [disabled]="verseCompletedFlag" [style.color]="verseCompletedFlag ? 'green' : 'initial'" (keyup)="checkHiddenVerse($event.target.value)" rows="12" cols="100">
+
+</textarea>
+
+<div>Timer: <b>{{clockTime | timer}}</b></div>
+<div>Hints Used: <b>{{hintsUsed}}</b></div>
+
