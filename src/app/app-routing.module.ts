@@ -10,6 +10,7 @@ import { ReactiveFormExComponent } from './components/reactive-form-ex/reactive-
 import { CssGridExampleComponent } from './components/css-grid-example/css-grid-example.component';
 import { StepperExampleComponent } from './components/stepper-example/stepper-example.component';
 import { RememberVerseComponent } from './components/remember-verse/remember-verse.component';
+import { ProgressBarWithXstateComponent } from './components/progress-bar-with-xstate/progress-bar-with-xstate.component';
 
 const routes: Routes = [
   { path: 'home', component: HomePageComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'css-grid', component: CssGridExampleComponent },
       { path: 'stepper', component: StepperExampleComponent },
       { path: 'remember-verse', component: RememberVerseComponent },
+      { path: 'progress-bar', component: ProgressBarWithXstateComponent },
     ]
   },
   { path: '',   redirectTo: '/home', pathMatch: 'full' },

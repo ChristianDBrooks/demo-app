@@ -14,7 +14,8 @@ import { NavLinkDirective } from './directives/nav-link.directive';
 import { StepperExampleComponent } from './components/stepper-example/stepper-example.component';
 import { MatStepperModule } from '@angular/material/stepper';
 import { RememberVerseComponent } from './components/remember-verse/remember-verse.component';
-import { TimerPipe } from './pipes/timer.pipe'
+import { TimerPipe } from './pipes/timer.pipe';
+import { ProgressBarWithXstateComponent } from './components/progress-bar-with-xstate/progress-bar-with-xstate.component'
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { TimerPipe } from './pipes/timer.pipe'
     NavLinkDirective,
     StepperExampleComponent,
     RememberVerseComponent,
-    TimerPipe
+    TimerPipe,
+    ProgressBarWithXstateComponent
   ],
   imports: [
     BrowserModule,
