@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { BibleService } from 'src/app/services/bible.service';
 
 @Component({
   selector: 'app-remember-verse',
@@ -6,6 +7,7 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./remember-verse.component.scss']
 })
 export class RememberVerseComponent implements OnInit {
+  searchedVerse: String;
   fullVerse: String;
   hiddenVerse: String;
   attemptedVerse: String;
@@ -20,12 +22,26 @@ export class RememberVerseComponent implements OnInit {
   @ViewChild('inputVerse', { static: true }) inputVerseElRef: ElementRef;
   @ViewChild('verseAttempt', { static: true }) verseAttemptElRef: ElementRef;
 
-  constructor() { }
+  constructor(public bibleService: BibleService) { }
 
   ngOnInit() {
     if (localStorage.getItem('saved-verse')) {
       this.inputVerseElRef.nativeElement.value = localStorage.getItem('saved-verse');
       this.updateSaveVerse(this.inputVerseElRef.nativeElement.value);
+    }
+  }
+
+  searchPassage(passage) {
+    if (passage == null || passage == undefined || passage == "") {
+      alert("Cannot search for an empty passage!")
+    } else {
+      this.bibleService.getPassage(passage).subscribe(res => {
+        if (res.passages.length > 0) {
+          this.searchedVerse = res.passages[0];
+        } else {
+          this.searchedVerse = `No results were found for search "${passage}".`
+        }
+      });
     }
   }
 

@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ReactiveFormExComponent } from './components/reactive-form-ex/reactive-form-ex.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 import { ExamplePageComponent } from './pages/example-page/example-page.component';
 import { CssGridExampleComponent } from './components/css-grid-example/css-grid-example.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -34,6 +35,7 @@ import { TimerPipe } from './pipes/timer.pipe'
     AppRoutingModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatStepperModule
   ],
   providers: [],

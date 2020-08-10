@@ -1,4 +1,10 @@
-<label for="">Type the memory verse you'd like to memorize.<br></label>
+
+<label for="">Search for the verse you'd like to memorize.<br></label>
+<input type="text" #searchVerseInput placeholder="Search for a passage"><button (click)="searchPassage(searchVerseInput.value)">Search</button>
+<div [innerHTML]="searchedVerse"></div>
+<br>
+
+<label for="">Manually enter verse you'd like to memorize.<br></label>
 <textarea #inputVerse value="" (keyup)="updateSaveVerse($event.target.value)" rows="12" cols="100"></textarea>
 
 <button (click)="saveVerse(inputVerse)" [disabled]="!saveEnabledFlag">Save Verse</button>
